@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <title>Exercise Routine Selector</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Required meta tags always come first -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link href="css/styles.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <nav class="navbar navbar-dark navbar-expand-sm bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Home</a>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="#">Exercise List</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Routine List</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>            
+            </div>
+        </nav>
+
+
+        <div class="container">
+            <div id="exercisecarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active text-center p-4">
+                        <h2 class="text-dark">Choose among exercise routines ranging from beginner to advanced.</h2>
+                    </div>
+                    <div class="carousel-item text-center p-4">
+                        <h2 class="text-dark">Learn proper technique.</h2>
+                    </div>
+                    <div class="carousel-item text-center p-4">
+                        <h2 class="text-dark">Create a profile and track progress</h2>
+                    </div>
+                    <div class="carousel-item text-center p-4">
+                        <h2 class="text-dark">Collaborate and compete with other members.</h2>
+                    </div>
+                </div>
+                <ol class="carousel-indicators">
+                    <li data-target="#exercisecarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#exercisecarousel" data-slide-to="1"></li>
+                    <li data-target="#exercisecarousel" data-slide-to="2"></li>
+                    <li data-target="#exercisecarousel" data-slide-to="3"></li>
+                </ol>
+                <a class="carousel-control-prev" href="#exercisecarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#exercisecarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+                <div class="btn-group" id="carouselButton">
+                    <button class="btn btn-danger btn-sm" id="carousel-pause">
+                    <span class="fa fa-pause">Pause</span>
+                    </button>
+                    <button class="btn btn-danger btn-sm" id="carousel-play">
+                    <span class="fa fa-play">Play</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(current = 0);
+                $("#exercisecarousel").carousel( { interval: 5000 } );
+                $("#carousel-pause").click(function(){
+                    $("#exercisecarousel").carousel('pause');
+                });
+                $("#carousel-play").click(function(){
+                    $("#exercisecarousel").carousel('cycle');
+                });
+            });
+        </script>
+    </body>
+</html>
